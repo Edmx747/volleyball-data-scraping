@@ -1,0 +1,23 @@
+{
+  "name": "scraping_server",
+  "version": "1.0.0",
+  "description": "Scraping server for TFOC volleyball club",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "edmx747",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "http": "0.0.1-security",
+    "puppeteer": "^5.2.1",
+    "selenium": "^2.20.0",
+    "selenium-webdriver": "^4.0.0-alpha.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
