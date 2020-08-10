@@ -4,7 +4,7 @@ const puppeteer = require('puppeteer');
 exports.getTeams = function(req, res) {
   (async () => {
     console.log('getTeams')
-    const browser = await puppeteer.launch({headless:true , slowMo: 100});
+    const browser = await puppeteer.launch({headless:true , slowMo: 100, args: ['--no-sandbox'] });
     const page = await browser.newPage();
     const teamName = req.params.teamName
     //Headless browser window size

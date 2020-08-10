@@ -5,7 +5,7 @@ exports.getPlayerDetails = function(req, res) {
   (async () => {
     const teamID = req.params.teamID
     const playerID = req.params.playerID
-    const browser = await puppeteer.launch({headless:true});
+    const browser = await puppeteer.launch({headless:true, args: ['--no-sandbox'] });
     const page = await browser.newPage();
     await page.goto(`http://lnv-web.dataproject.com/PlayerDetails.aspx?TeamID=${teamID}&PlayerID=${playerID}&ID=72`);
     const html = await page.evaluate(() => {

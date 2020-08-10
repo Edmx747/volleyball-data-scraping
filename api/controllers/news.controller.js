@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer');
 exports.getNewsPage = function(req, res) {
     (async () => {
         const currentPage = req.params.page
-        const browser = await puppeteer.launch()
+        const browser = await puppeteer.launch({headless:true, args: ['--no-sandbox'] });
         const page = await browser.newPage()
         await page.goto(`http://www.lnv.fr/competition-10-45_${currentPage}.html`)
 
